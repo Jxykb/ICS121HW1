@@ -1,10 +1,10 @@
 import sys
 
 
-def tokenize(TextFilePath):
+def tokenize(text_file_path):
     tokens = []
     try:
-        file = open(TextFilePath, encoding ='utf-8')
+        file = open(text_file_path, encoding ='utf-8')
         for line in file:
             token = ""
             for char in line:
