@@ -1,7 +1,8 @@
 import sys
 from PartA import tokenize
 
-
+#Time Complexity: O(N) where N is the number of characters in the largest text file.
+# dominated by the tokenize function
 def intersection(file1, file2):
     tokens1 = set(tokenize(file1))
     tokens2 = set(tokenize(file2))

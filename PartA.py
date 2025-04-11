@@ -1,6 +1,6 @@
 import sys
 
-
+#Time Complexity: O(N) where N is the number of characters in the file
 def tokenize(text_file_path):
     tokens = []
     try:
@@ -23,6 +23,7 @@ def tokenize(text_file_path):
         print(error)
     return tokens
 
+#Time Complexity: O(M) where M is the number of tokens.
 def compute_word_frequency(tokens):
     freq_map = {}
     for token in tokens:
@@ -32,11 +33,13 @@ def compute_word_frequency(tokens):
             freq_map[token] = 1
     return freq_map
 
+#Time Complexity: O(Klog(K)) where K is the number of unique tokens
 def print_freq(frequency_map):
     sorted_frequency_map = sorted(frequency_map.items(), key=lambda x: x[1], reverse=True)
     for item, frequency in sorted_frequency_map:
         print(item + " -> " + str(frequency))
 
+#Time Complexity: O(N) dominated by the tokenize function
 def main():
     filepath = sys.argv[1]
     tokens = tokenize(filepath)
