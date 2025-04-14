@@ -5,7 +5,7 @@ import sys
 def tokenize(text_file_path):
     tokens = []
     try:
-        file = open(text_file_path, encoding ='utf-8')
+        file = open(text_file_path)
         #this for loop is O(M) where m is the number of lines in the file
         for line in file:
             token = ""
