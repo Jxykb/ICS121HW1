@@ -2,7 +2,7 @@ import sys
 from PartA import tokenize
 
 #Time Complexity: O(N) where N is the number of characters in the largest text file.
-# dominated by the tokenize function
+#Dominated by the tokenize function
 def intersection(file1, file2):
     tokens1 = set(tokenize(file1))
     tokens2 = set(tokenize(file2))
@@ -11,6 +11,8 @@ def intersection(file1, file2):
     common_map = {'common_token_count': common_tokens, 'common_tokens': file_intersection}
     return common_map
 
+#Time Complexity: O(N) where O(N) is the time complexity of the intersection function
+#which is the dominating factor in this program
 def main():
     filepath1 = sys.argv[1]
     filepath2 = sys.argv[2]
