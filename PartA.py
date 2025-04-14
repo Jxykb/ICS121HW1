@@ -16,6 +16,7 @@ def tokenize(text_file_path):
                 elif token:
                     tokens.append(token)
                     token = ""
+            #handles last token in line
             if token:
                 tokens.append(token)
                 token = ""
